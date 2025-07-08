@@ -15,24 +15,97 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder=" 📍Enter City" required />
-          <input type="submit" value="Search" />
-          <h3>Tuesday 14:49</h3>
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder=" 📍Enter City"
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
-
       <main>
-        <div>
-          <h1>Paris</h1>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city">Paris</h1>
+            <p class="weather-app-details">
+              Tuesday 14:49, scattered clouds
+              <br />
+              Humidity: <strong>66%</strong>, Wind: <strong>3.13km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div class="weather-app-icon">🌤️</div>
+            <div class="weather-app-temperature">12</div>
+            <div class="weatehr-app-unit">°C</div>
+          </div>
         </div>
-        <div>🌤️ 12°C</div>
-        <p>
-          scattered clouds
-          <br />
-          Humidity: 66%, Wind: 3.13km
-        </p>
       </main>
+
+      <!-- 7-Day Forecast Section -->
+      <div class="daily-forecast">
+        <h2 class="daily-list-header">📅 7-Day Forecast</h2>
+        <div class="daily-list-body">
+          <div class="forecast-day">
+            <p class="day">Mon</p>
+            <p>7/7</p>
+            <span class="temp-hi">97°</span>
+            <span class="temp-low">59°</span>
+            <img src="images/sunny.png" alt="Sunny" class="forecast-icon" />
+          </div>
+          <div class="forecast-day">
+            <p class="day">Tue</p>
+            <p>7/8</p>
+            <span class="temp-hi">94°</span>
+            <span class="temp-low">61°</span>
+            <img
+              src="images/partly-cloudy.png"
+              alt="Partly Cloudy"
+              class="forecast-icon"
+            />
+          </div>
+          <div class="forecast-day">
+            <p class="day">Wed</p>
+            <p>7/9</p>
+            <span class="temp-hi">90°</span>
+            <span class="temp-low">65°</span>
+            <img src="images/cloudy.png" alt="Cloudy" class="forecast-icon" />
+          </div>
+          <div class="forecast-day">
+            <p class="day">Thu</p>
+            <p>7/10</p>
+            <span class="temp-hi">88°</span>
+            <span class="temp-low">62°</span>
+            <img src="images/rainy.png" alt="Rainy" class="forecast-icon" />
+          </div>
+          <div class="forecast-day">
+            <p class="day">Fri</p>
+            <p>7/11</p>
+            <span class="temp-hi">92°</span>
+            <span class="temp-low">64°</span>
+            <img src="images/sunny.png" alt="Sunny" class="forecast-icon" />
+          </div>
+          <div class="forecast-day">
+            <p class="day">Sat</p>
+            <p>7/12</p>
+            <span class="temp-hi">89°</span>
+            <span class="temp-low">63°</span>
+            <img
+              src="images/partly-cloudy.png"
+              alt="Partly Cloudy"
+              class="forecast-icon"
+            />
+          </div>
+          <div class="forecast-day">
+            <p class="day">Sun</p>
+            <p>7/13</p>
+            <span class="temp-hi">91°</span>
+            <span class="temp-low">67°</span>
+            <img src="images/cloudy.png" alt="Cloudy" class="forecast-icon" />
+          </div>
+        </div>
+      </div>
 
       <footer>
         This project was coded by
