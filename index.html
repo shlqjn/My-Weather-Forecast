@@ -3,13 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Knewave&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Ranchers&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Titan+One&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <title>Forecast app</title>
   </head>
@@ -19,96 +24,38 @@
         <form class="search-form" id="search-form">
           <input
             type="search"
-            placeholder=" 📍Enter City"
+            placeholder=" 🌺Search a city ☀️💦"
             required
             id="search-form-input"
             class="search-form-input"
           />
-          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
+      <!--Weather app details -->
       <main>
         <div class="weather-app-data">
-          <div>
+          <div class="weather-left">
             <h1 class="weather-app-city" id="city">Paris</h1>
-            <p class="weather-app-details">
-              Tuesday 14:49, scattered clouds
-              <br />
-              Humidity: <strong>66%</strong>, Wind: <strong>3.13km/h</strong>
-            </p>
+            <div class="weather-app-temperature-container">
+              <div class="weather-app-temperature" id="temperature"></div>
+              <div class="weatehr-app-unit">℉</div>
+              <div id="icon"></div>
+            </div>
+            <span id="time"></span>
           </div>
-          <div class="weather-app-temperature-container">
-            <div class="weather-app-icon">🌤️</div>
-            <div class="weather-app-temperature" id="temperature">12</div>
-            <div class="weatehr-app-unit">℉</div>
+
+          <div class="weather-details">
+            <span id="description"></span><br />
+            Humidity: <strong id="humidity"></strong> <br />
+            Wind:<strong id="wind-speed"></strong>
           </div>
         </div>
+        <!-- 7-Day Forecast Section -->
+        <div class="forecast-container">
+        <h2 class="forecast-header">🌈 7-Day Forecast</h2>
+        <div class="weather-forecast" id="forecast"></div>
       </main>
-
       <!-- 7-Day Forecast Section -->
-      <div class="daily-forecast">
-        <h2 class="daily-list-header">📅 7-Day Forecast</h2>
-        <div class="daily-list-body">
-          <div class="forecast-day">
-            <p class="day">Mon</p>
-            <p>7/7</p>
-            <span class="temp-hi">97°</span>
-            <span class="temp-low">59°</span>
-            <img src="images/sunny.png" alt="Sunny" class="forecast-icon" />
-          </div>
-          <div class="forecast-day">
-            <p class="day">Tue</p>
-            <p>7/8</p>
-            <span class="temp-hi">94°</span>
-            <span class="temp-low">61°</span>
-            <img
-              src="images/partly-cloudy.png"
-              alt="Partly Cloudy"
-              class="forecast-icon"
-            />
-          </div>
-          <div class="forecast-day">
-            <p class="day">Wed</p>
-            <p>7/9</p>
-            <span class="temp-hi">90°</span>
-            <span class="temp-low">65°</span>
-            <img src="images/cloudy.png" alt="Cloudy" class="forecast-icon" />
-          </div>
-          <div class="forecast-day">
-            <p class="day">Thu</p>
-            <p>7/10</p>
-            <span class="temp-hi">88°</span>
-            <span class="temp-low">62°</span>
-            <img src="images/rainy.png" alt="Rainy" class="forecast-icon" />
-          </div>
-          <div class="forecast-day">
-            <p class="day">Fri</p>
-            <p>7/11</p>
-            <span class="temp-hi">92°</span>
-            <span class="temp-low">64°</span>
-            <img src="images/sunny.png" alt="Sunny" class="forecast-icon" />
-          </div>
-          <div class="forecast-day">
-            <p class="day">Sat</p>
-            <p>7/12</p>
-            <span class="temp-hi">89°</span>
-            <span class="temp-low">63°</span>
-            <img
-              src="images/partly-cloudy.png"
-              alt="Partly Cloudy"
-              class="forecast-icon"
-            />
-          </div>
-          <div class="forecast-day">
-            <p class="day">Sun</p>
-            <p>7/13</p>
-            <span class="temp-hi">91°</span>
-            <span class="temp-low">67°</span>
-            <img src="images/cloudy.png" alt="Cloudy" class="forecast-icon" />
-          </div>
-        </div>
-      </div>
-
       <footer>
         This project was coded by
         <a href="https://github.com/shlqjn/" target="_blank"> Sheila Kagawa </a>
