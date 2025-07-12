@@ -105,51 +105,18 @@ main {
 .weather-details strong {
   color: #f652bd;
 }
-/* New CSS for the 7-day forecast */
-.forecast-header {
-  font-family: "Outfit", sans-serif;
-  padding: 10px 20px;
-  border-radius: 12px 12px 0 0;
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-}
+/* New CSS for the 5-day forecast */
 .weather-forecast {
   display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  justify-content: space-around;
+  margin: 30px;
 }
-
 .weather-forecast-date {
   text-align: center;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(39, 33, 66, 00.4);
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 10px;
-}
-
-.forecast-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 10px;
-  padding: 10px;
-}
-.weather-forecast-day {
-  border-radius: 12px;
-  width: 100px;
-  padding: 10px;
-  text-align: center;
-  font-family: "Outfit", sans-serif;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.weather-forecast-day:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 4px 15px rgba(255, 183, 229, 0.6);
-  background-color: #ffe6f0;
-  border-color: #fca3cc;
+  margin: 10px;
 }
 .weather-forecast-icon {
   font-size: 38px;
@@ -157,16 +124,13 @@ main {
 }
 .weather-forecast-temperatures {
   text-align: center;
-  color: #f65282;
-  margin-top: 10px;
+  color: #f652bd;
   display: flex;
   justify-content: center;
 }
-
 .weather-forecast-temperature {
   padding: 0 10px;
 }
-
 footer {
   border-top: 1px solid #f9f7fe;
   padding: 30px 0 0 0;

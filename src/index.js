@@ -41,6 +41,7 @@ function formatDate(date) {
   }
   return `${day} ${hours}:${minutes}`;
 }
+//Search for the city
 function searchCity(city) {
   let apiKey = "73547at3639f1d422ob0047943ad8fbb";
   let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
@@ -54,8 +55,35 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-//Search for the city
+/* 7-day forecast */
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+    <div class="weather-forecast-day"> 
+      <div class="weather-forecast-date">${day}</div>
+      <div class="weather-forecast-icon">☁️</div>
+      <div class="weather-forecast-temperatures">
+      <div class="weather-forecast-temperature">
+       <strong>70°</strong>
+         </div>
+         <div class="weather-forecast-temperature">9°</div>
+        </div>
+      </div>
+    `;
+  });
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Seattle");
+displayForecast();
