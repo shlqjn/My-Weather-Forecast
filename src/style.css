@@ -83,7 +83,7 @@ main {
   font-weight: bold;
   margin-left: 10px;
 }
-.weatehr-app-unit {
+.weather-app-unit {
   margin-top: 6px;
   font-size: 28px;
 }
@@ -105,10 +105,25 @@ main {
 .weather-details strong {
   color: #f652bd;
 }
+#time {
+  color: #fca3cc;
+  font-size: 16px;
+  font-weight: bold;
+}
 /* New CSS for the 5-day forecast */
+.forecast-header {
+  font-family: "Outfit", sans-serif;
+  padding: 10px 20px;
+  border-radius: 12px 12px 0 0;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
 .weather-forecast {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: 30px;
 }
 .weather-forecast-date {
@@ -118,6 +133,29 @@ main {
   line-height: 20px;
   margin: 10px;
 }
+.forecast-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px;
+}
+.weather-forecast-day {
+  border-radius: 12px;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.weather-forecast-day:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 183, 229, 0.6);
+  background-color: #ffe6f0;
+  border-color: #fca3cc;
+}
+
 .weather-forecast-icon {
   font-size: 38px;
   text-align: center;
@@ -125,6 +163,7 @@ main {
 .weather-forecast-temperatures {
   text-align: center;
   color: #f652bd;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
